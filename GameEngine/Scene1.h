@@ -1,0 +1,24 @@
+#pragma once
+
+#include "GameEngine.h"
+
+class Scene1 : public Game
+{
+	void loadScene() override
+	{
+		/*
+		// Add GameObjects and Components here
+		GameObjectPtr  gameObject = make_shared<GameObject>();
+		// Nam component
+		ComponentPtr myFirstComponent = make_shared<NamComponent>();
+		gameObject->addComponent(myFirstComponent);
+		// Camera component
+		ComponentPtr cameraComponent = make_shared<CameraComponent>();
+		gameObject->addComponent(cameraComponent);
+		// Game object added
+		this->addChildGameObject(gameObject);
+		*/
+
+	} // end loadScene
+	
+};
