@@ -136,7 +136,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MathLibsConstsFuncs.cpp" />
-    <ClCompile Include="MyMesh.cpp" />
+    <ClCompile Include="TriangleMeshComponent.cpp" />
     <ClCompile Include="NamComponent.cpp" />
     <ClCompile Include="StaticGraphicsFunctions.cpp" />
   </ItemGroup>
@@ -149,7 +149,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="MathLibsConstsFuncs.h" />
     <ClInclude Include="MeshComponent.h" />
-    <ClInclude Include="MyMesh.h" />
+    <ClInclude Include="TriangleMeshComponent.h" />
     <ClInclude Include="NamComponent.h" />
     <ClInclude Include="Scene1.h" />
     <ClInclude Include="StaticGraphicsFunctions.h" />

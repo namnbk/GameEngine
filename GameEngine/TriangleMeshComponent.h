@@ -1,10 +1,10 @@
 #pragma once
 #include "MeshComponent.h"
-class MyMesh :
+class TriangleMeshComponent :
     public MeshComponent
 {
 public:
-	MyMesh(GLuint shaderProgram)
+	TriangleMeshComponent(GLuint shaderProgram)
 		: MeshComponent(shaderProgram, 100)
 	{
 		componentType = MESH;
