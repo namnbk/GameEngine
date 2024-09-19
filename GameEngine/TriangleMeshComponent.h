@@ -10,7 +10,11 @@ public:
 		componentType = MESH;
 	};
 
+
+
 protected:
     virtual void buildMesh() override;
+
+	virtual void draw();
 };
 
