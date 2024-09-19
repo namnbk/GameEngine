@@ -1,5 +1,6 @@
 #include "GameEngine.h"
 #include "BuildShaderProgram.h"
+#include "MeshComponent.h"
 // #include <GL/glew.h> // Must be included before glfw
 // #include <GLFW/glfw3.h>
 // #include <stdexcept>
@@ -299,7 +300,12 @@ void Game::renderScene()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	// Render loop
-	// TODO
+	// Render the Scene ...
+	for (auto& mesh : MeshComponent::GetMeshComponents()) {
+
+		mesh->draw();
+	}
+
 
 	// Swap the front and back buffers
 	glfwSwapBuffers(renderWindow);

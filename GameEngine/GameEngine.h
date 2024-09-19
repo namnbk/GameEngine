@@ -12,6 +12,7 @@
 // Component Subclasses
 #include "NamComponent.h"
 #include "CameraComponent.h"
+#include "TriangleMeshComponent.h"
 
 // Shaders program
 #include "BuildShaderProgram.h"

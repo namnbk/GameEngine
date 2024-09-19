@@ -29,6 +29,11 @@ class Scene1 : public Game
 		// Build the shader program
 		GLuint shaderProgram = BuildShaderProgram(shaders);
 
+		// Render a triangle
+		ComponentPtr triangle =
+			std::make_shared<TriangleMeshComponent>(shaderProgram);
+
+		this->addComponent(triangle);
 
 	} // end loadScene
 	
