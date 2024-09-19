@@ -1,5 +1,6 @@
 #include "TriangleMeshComponent.h"
 
+
 void TriangleMeshComponent::buildMesh()
 {
 	SubMesh subMesh;
@@ -15,24 +16,4 @@ void TriangleMeshComponent::buildMesh()
 	// Add to the subMeshes that are part of the mesh component
 	subMeshes.push_back(subMesh);
 
-}
-
-void TriangleMeshComponent::draw() {
-	// Bind the shader program for the MeshComponent
-	glUseProgram(shaderProgram);
-
-	// Render all subMeshes in this MeshComponent
-	for (auto& subMesh : subMeshes) {
-
-		// Bind vertex array object for the subMesh
-		glBindVertexArray(subMesh.vao);
-
-		// Determine if sequential(ordered) or indexed 
-		// rendering will be used to render the sub Mesh
-		if (subMesh.renderMode == ORDERED) {
-
-			// Trigger vertex fetch for ordered rendering 					
-			glDrawArrays(subMesh.primitiveMode, 0, subMesh.count);
-		}
-	}
 }

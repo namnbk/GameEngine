@@ -302,7 +302,6 @@ void Game::renderScene()
 	// Render loop
 	// Render the Scene ...
 	for (auto& mesh : MeshComponent::GetMeshComponents()) {
-
 		mesh->draw();
 	}
 

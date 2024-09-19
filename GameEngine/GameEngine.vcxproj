@@ -136,6 +136,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MathLibsConstsFuncs.cpp" />
+    <ClCompile Include="MeshComponent.cpp" />
     <ClCompile Include="TriangleMeshComponent.cpp" />
     <ClCompile Include="NamComponent.cpp" />
     <ClCompile Include="StaticGraphicsFunctions.cpp" />

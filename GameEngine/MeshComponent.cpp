@@ -65,14 +65,14 @@ void MeshComponent::draw() const
 		for (auto & subMesh : subMeshes) {
 
 			// Bind vertex array object for the subMesh
-			// TODO
+			glBindVertexArray(subMesh.vao);
 
 			// Determine if sequential(ordered) or indexed rendering will be 
 			// used to render the sub Mesh
 			if (subMesh.renderMode == ORDERED) {
 
-				// Trigger vertex fetch for ordered rendering 
-				//TODO
+				// Trigger vertex fetch for ordered rendering 				
+				glDrawArrays(subMesh.primitiveMode, 0, subMesh.count);
 
 			}
 			else if (subMesh.renderMode == INDEXED) {

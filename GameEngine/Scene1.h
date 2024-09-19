@@ -6,17 +6,16 @@ class Scene1 : public Game
 {
 	void loadScene() override
 	{
-		/*
+		
 		// Add GameObjects and Components here
 		GameObjectPtr  gameObject = make_shared<GameObject>();
+		/*
 		// Nam component
 		ComponentPtr myFirstComponent = make_shared<NamComponent>();
 		gameObject->addComponent(myFirstComponent);
 		// Camera component
 		ComponentPtr cameraComponent = make_shared<CameraComponent>();
 		gameObject->addComponent(cameraComponent);
-		// Game object added
-		this->addChildGameObject(gameObject);
 		*/
 
 		// Build shader program
@@ -29,12 +28,13 @@ class Scene1 : public Game
 		// Build the shader program
 		GLuint shaderProgram = BuildShaderProgram(shaders);
 
-		// Render a triangle
+		// Add a trianlge mesh component
 		ComponentPtr triangle =
 			std::make_shared<TriangleMeshComponent>(shaderProgram);
+		gameObject->addComponent(triangle);
 
-		this->addComponent(triangle);
-
+		// Game object added
+		this->addChildGameObject(gameObject);
 	} // end loadScene
 	
 };

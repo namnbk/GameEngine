@@ -14,7 +14,5 @@ public:
 
 protected:
     virtual void buildMesh() override;
-
-	virtual void draw();
 };
 
