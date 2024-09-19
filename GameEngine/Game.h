@@ -39,7 +39,7 @@ public:
 	 *
 	 * @param 	windowTitle	(Optional) title for the rendering window.
 	 */
-	Game(std::string windowTitle = "Lab 1 CSE489/589");
+	Game(std::string windowTitle = "Lab 3 CSE489/589");
 
 	/**
 	 * @fn	void Game::runGame();

@@ -19,6 +19,17 @@ class Scene1 : public Game
 		this->addChildGameObject(gameObject);
 		*/
 
+		// Build shader program
+		ShaderInfo shaders[] = {
+			{ GL_VERTEX_SHADER, "Shaders/vertexShader.glsl" },
+			{ GL_FRAGMENT_SHADER, "Shaders/fragmentShader.glsl" },
+			{ GL_NONE, NULL } // signals that there are no more shaders 
+		};
+
+		// Build the shader program
+		GLuint shaderProgram = BuildShaderProgram(shaders);
+
+
 	} // end loadScene
 	
 };

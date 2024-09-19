@@ -1,4 +1,5 @@
 #include "GameEngine.h"
+#include "BuildShaderProgram.h"
 // #include <GL/glew.h> // Must be included before glfw
 // #include <GLFW/glfw3.h>
 // #include <stdexcept>
@@ -313,6 +314,9 @@ void Game::shutdown()
 
 	// Frees GLFW allocated resources
 	glfwTerminate();
+
+	// Delete shader programs
+	deleteAllShaderPrograms();
 	
 	if (VERBOSE) cout << "Game Shutdown Complete" << endl;
 

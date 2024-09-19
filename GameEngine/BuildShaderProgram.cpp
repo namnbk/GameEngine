@@ -1,7 +1,7 @@
 #include "BuildShaderProgram.h"
 #include <cstdlib>
 
-#define VERBOSE false
+#define VERBOSE true
 
 // Static variable definition. Holds all shader programs created usig
 // BuildShaderProgram. Allows all the shader programs to be 
