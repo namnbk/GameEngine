@@ -303,6 +303,10 @@ void Game::renderScene()
 {
 	if (VERBOSE) cout << " Rendering Scene!" << endl;
 
+	// Viewing transformation
+	mat4 viewTrans = glm::translate(vec3(0.0f, 0.0f, -2.0f));
+	glUniformMatrix4fv(101, 1, GL_FALSE, glm::value_ptr(viewTrans));
+
 	// Clear the color and depth buffers
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
