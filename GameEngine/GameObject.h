@@ -113,6 +113,10 @@ public:
 	/** @brief	Name of the game object */
 	std::string gameObjectName = "GameObject";
 
+
+	// (TEMPORARY) Modeling transformation for the GameObject 
+	mat4 modelingTransformation;
+
 protected:
 
 	/** @brief	Current state of the game object */
