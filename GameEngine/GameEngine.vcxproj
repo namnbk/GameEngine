@@ -148,6 +148,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Material.h" />
     <ClInclude Include="MathLibsConstsFuncs.h" />
     <ClInclude Include="MeshComponent.h" />
     <ClInclude Include="TriangleMeshComponent.h" />

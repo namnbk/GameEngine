@@ -4,6 +4,7 @@
 
 #include "MathLibsConstsFuncs.h"
 #include "Component.h"
+#include "Material.h"
 //#include "Bullet/btBulletDynamicsCommon.h"
 
 using namespace constants_and_types;
@@ -71,7 +72,7 @@ struct SubMesh {
 
 	GLenum primitiveMode = GL_TRIANGLES; // Primitive mode for the mesh GL_POINTS, GL_LINES, etc.
 
-	//Material material;  // Material properties used to render the object
+	Material material;  // Material properties used to render the object
 
 }; // end SubMesh
 

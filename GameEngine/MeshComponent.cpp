@@ -66,6 +66,8 @@ void MeshComponent::draw() const
 
 		// Render all subMeshes
 		for (auto & subMesh : subMeshes) {
+			// Fragment color 
+			glUniform4fv(500, 1, glm::value_ptr(subMesh.material.basicColor));
 
 			// Bind vertex array object for the subMesh
 			glBindVertexArray(subMesh.vao);

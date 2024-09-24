@@ -12,6 +12,7 @@ void TriangleMeshComponent::buildMesh()
 	subMesh.primitiveMode = GL_TRIANGLES;
 	subMesh.renderMode = ORDERED;
 	subMesh.count = 3;
+	subMesh.material.basicColor = BLUE_RGBA;
 
 	// Add to the subMeshes that are part of the mesh component
 	subMeshes.push_back(subMesh);
