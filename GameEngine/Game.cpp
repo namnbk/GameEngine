@@ -53,6 +53,13 @@ bool Game::initializeGame()
 		loadScene();
 
 		// Explicitly call the resize method to set the initial projection transformation
+		// Retrieve the current frame buffer size
+		int screenWidth, screenHeight;
+		glfwGetFramebufferSize(this->renderWindow, &screenWidth, &screenHeight);
+
+		// Explicitly call the resize method to set the initial 
+		// projection transformation
+		framebuffer_size_callback(initialScreenWidth, initialScreenHeight);
 
 
 		// Start an initialize all of the GameObjects in the game
@@ -345,8 +352,11 @@ void Game::framebuffer_size_callback(int width, int height)
 	// Set parameters for the window transformation ...
 	glViewport(0, 0, width, height);
 	
-	// Set the projection transformation ...
-	// TODO
+	// Set the projection transformation
+	float aspectRadio = static_cast<float>(width) / static_cast<float>(height);
+	float verticalFOV = 2 * PI / 12.0f;  // 30 degrees
+	mat4 projMat = glm::perspective(verticalFOV, aspectRadio, 0.1f, 1000.0f);
+	glUniformMatrix4fv(100, 1, GL_FALSE, glm::value_ptr(projMat));
 
 } // end framebuffer_size_callback
 

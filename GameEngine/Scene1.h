@@ -28,6 +28,9 @@ class Scene1 : public Game
 		// Build the shader program
 		GLuint shaderProgram = BuildShaderProgram(shaders);
 
+		// Bind the shader program
+		glUseProgram(shaderProgram);
+
 		// Add a trianlge mesh component
 		ComponentPtr triangle =
 			std::make_shared<TriangleMeshComponent>(shaderProgram);
