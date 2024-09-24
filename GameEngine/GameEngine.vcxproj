@@ -137,6 +137,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MathLibsConstsFuncs.cpp" />
     <ClCompile Include="MeshComponent.cpp" />
+    <ClCompile Include="SharedTransformations.cpp" />
+    <ClCompile Include="SharedUniformBlock.cpp" />
     <ClCompile Include="TriangleMeshComponent.cpp" />
     <ClCompile Include="NamComponent.cpp" />
     <ClCompile Include="StaticGraphicsFunctions.cpp" />
@@ -151,6 +153,8 @@
     <ClInclude Include="Material.h" />
     <ClInclude Include="MathLibsConstsFuncs.h" />
     <ClInclude Include="MeshComponent.h" />
+    <ClInclude Include="SharedTransformations.h" />
+    <ClInclude Include="SharedUniformBlock.h" />
     <ClInclude Include="TriangleMeshComponent.h" />
     <ClInclude Include="NamComponent.h" />
     <ClInclude Include="Scene1.h" />
