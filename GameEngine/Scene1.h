@@ -8,7 +8,7 @@ class Scene1 : public Game
 	{
 		
 		// Add GameObjects and Components here
-		GameObjectPtr  gameObject = make_shared<GameObject>();
+		gameObject = make_shared<GameObject>();
 		/*
 		// Nam component
 		ComponentPtr myFirstComponent = make_shared<NamComponent>();
@@ -39,5 +39,31 @@ class Scene1 : public Game
 		// Game object added
 		this->addChildGameObject(gameObject);
 	} // end loadScene
-	
+
+	virtual void processGameInput()
+	{
+		Game::processGameInput();
+		// Check if the '0' key is pressed and wasn't pressed before
+		if (GLFW_PRESS == glfwGetKey(glfwGetCurrentContext(), GLFW_KEY_0) && !zero_keyDown) {
+			// Toggle rendering triangle
+			if (gameObject.get()->getState() == ACTIVE) {
+				gameObject.get()->setState(PAUSED);
+			}
+			else if (gameObject.get()->getState() == PAUSED) {
+				gameObject.get()->setState(ACTIVE);
+			}
+			// set flag to true to avoid repeating while key is held down
+			zero_keyDown = true;
+		}
+		else if (glfwGetKey(glfwGetCurrentContext(), GLFW_KEY_0) == GLFW_RELEASE) {
+			// reset flag to allow printing again when the key is pressed
+			zero_keyDown = false;
+		}
+	}
+
+
+protected:
+	std::shared_ptr<GameObject> gameObject;
+	bool zero_keyDown = false;
+
 };
