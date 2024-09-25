@@ -305,7 +305,8 @@ void Game::renderScene()
 
 	// Viewing transformation
 	mat4 viewTrans = glm::translate(vec3(0.0f, 0.0f, -2.0f));
-	glUniformMatrix4fv(101, 1, GL_FALSE, glm::value_ptr(viewTrans));
+	// glUniformMatrix4fv(101, 1, GL_FALSE, glm::value_ptr(viewTrans));
+	SharedTransformations::setViewMatrix(viewTrans);
 
 	// Clear the color and depth buffers
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -360,7 +361,8 @@ void Game::framebuffer_size_callback(int width, int height)
 	float aspectRadio = static_cast<float>(width) / static_cast<float>(height);
 	float verticalFOV = 2 * PI / 12.0f;  // 30 degrees
 	mat4 projMat = glm::perspective(verticalFOV, aspectRadio, 0.1f, 1000.0f);
-	glUniformMatrix4fv(100, 1, GL_FALSE, glm::value_ptr(projMat));
+	// glUniformMatrix4fv(100, 1, GL_FALSE, glm::value_ptr(projMat));
+	SharedTransformations::setProjectionMatrix(projMat);
 
 } // end framebuffer_size_callback
 

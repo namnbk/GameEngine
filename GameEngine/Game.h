@@ -8,6 +8,7 @@
 #include "GameObject.h"
 
 #include "StaticGraphicsFunctions.h"
+#include "SharedTransformations.h"
 
 //The initial screen width when the game starts.
 static const int initialScreenWidth = 1024;

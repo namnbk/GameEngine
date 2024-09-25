@@ -28,6 +28,10 @@ class Scene1 : public Game
 		// Build the shader program
 		GLuint shaderProgram = BuildShaderProgram(shaders);
 
+		// Allocate the buffer for the uniform variable values and set
+		// up binding points.
+		SharedTransformations::setUniformBlockForShader(shaderProgram);
+
 		// Bind the shader program
 		glUseProgram(shaderProgram);
 

@@ -1,6 +1,7 @@
 #include "TriangleMeshComponent.h"
 
 
+
 void TriangleMeshComponent::buildMesh()
 {
 	// Submess define
@@ -12,11 +13,22 @@ void TriangleMeshComponent::buildMesh()
 	glBindVertexArray(subMesh.vao);
 
 	// Triangle positions
-	std::vector<vec4> positions;
+	std::vector<vec4> positions = {
+		// Left triangle
+		glm::vec4(-0.7f,  0.0f,  0.0f, 1.0f),
+		glm::vec4(-0.3f,  0.0f,  0.0f, 1.0f),
+		glm::vec4(-0.5f,  0.5f,  0.0f, 1.0f),
 
-	positions.push_back(vec4(-0.25, -0.25, 0.0, 1.0));
-	positions.push_back(vec4(0.25, -0.25, 0.0, 1.0));
-	positions.push_back(vec4(0.0, 0.25, 0.0, 1.0));
+		// Right triangle
+		glm::vec4(0.3f,  0.0f,  0.0f, 1.0f),
+		glm::vec4(0.7f,  0.0f,  0.0f, 1.0f),
+		glm::vec4(0.5f,  0.5f,  0.0f, 1.0f),
+
+		// Bottom triangle
+		glm::vec4(0.0f, -0.5f,  0.0f, 1.0f),
+		glm::vec4(0.2f,  0.0f,  0.0f, 1.0f),
+		glm::vec4(-0.2f,  0.0f,  0.0f, 1.0f),
+	};
 
 	// Create a buffer and load the vertex positions and colors into it.
 	// Store the identifier for the buffer in the subMesh.
@@ -34,8 +46,8 @@ void TriangleMeshComponent::buildMesh()
 
 	subMesh.primitiveMode = GL_TRIANGLES;
 	subMesh.renderMode = ORDERED;
-	subMesh.count = 3;
-	subMesh.material.basicColor = BLUE_RGBA;
+	subMesh.count = 9;
+	subMesh.material.basicColor = GREEN_RGBA;
 
 	// Add to the subMeshes that are part of the mesh component
 	subMeshes.push_back(subMesh);

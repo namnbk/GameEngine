@@ -1,9 +1,13 @@
 // Targeting version 4.5 of GLSL. 
 #version 460 core
 
-layout(location = 100) uniform mat4 projectionMatrix;
-layout(location = 101) uniform mat4 viewMatrix;
-layout(location = 102) uniform mat4 modelMatrix;
+layout(shared) uniform transformBlock
+{
+	mat4 modelMatrix;
+	mat4 normalModelMatrix;
+	mat4 viewMatrix;
+	mat4 projectionMatrix;
+};
 
 in vec4 position;
 

@@ -61,8 +61,8 @@ void MeshComponent::draw() const
 		// Use the shader program for this MeshComponent
 		glUseProgram(shaderProgram);
 		// Set the ModelMatrix uniform variable in the vertex shader
-		glUniformMatrix4fv(102, 1, GL_FALSE, glm::value_ptr(this->owningGameObject->modelingTransformation));
-
+		// glUniformMatrix4fv(102, 1, GL_FALSE, glm::value_ptr(this->owningGameObject->modelingTransformation));
+		SharedTransformations::setModelingMatrix(this->owningGameObject->modelingTransformation);
 
 		// Render all subMeshes
 		for (auto & subMesh : subMeshes) {

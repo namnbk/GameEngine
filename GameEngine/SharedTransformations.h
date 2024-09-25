@@ -22,7 +22,7 @@ layout(shared) uniform transformBlock
 {
 	mat4 modelMatrix;
 	mat3 normalModelMatrix;
-	mat4 viewingMatrix;
+	mat4 viewMatrix;
 	mat4 projectionMatrix;
 };
 
