@@ -33,6 +33,9 @@ void TriangleMeshComponent::buildMesh()
 	// Enable the flow of the positions into the vertex shader
 	glEnableVertexAttribArray(0);
 
+	// Unbind VAO
+	glBindVertexArray(0);
+
 	subMesh.primitiveMode = GL_TRIANGLES;
 	subMesh.renderMode = ORDERED;
 	subMesh.count = 3;
