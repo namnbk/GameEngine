@@ -13,6 +13,7 @@
 #include "NamComponent.h"
 #include "CameraComponent.h"
 #include "TriangleMeshComponent.h"
+#include "Triangle2MeshComponent.h"
 
 // Shaders program
 #include "BuildShaderProgram.h"
