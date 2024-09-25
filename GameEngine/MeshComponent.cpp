@@ -81,9 +81,8 @@ void MeshComponent::draw() const
 
 			}
 			else if (subMesh.renderMode == INDEXED) {
-
 				// Trigger vertex fetch for indexed rendering 
-				// TODO
+				glDrawElements(subMesh.primitiveMode, subMesh.count, GL_UNSIGNED_INT, 0);
 			}
 
 		}
