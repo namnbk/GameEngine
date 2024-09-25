@@ -139,6 +139,7 @@
     <ClCompile Include="MeshComponent.cpp" />
     <ClCompile Include="SharedTransformations.cpp" />
     <ClCompile Include="SharedUniformBlock.cpp" />
+    <ClCompile Include="Triangle1MeshComponent.cpp" />
     <ClCompile Include="Triangle2MeshComponent.cpp" />
     <ClCompile Include="Triangle3MeshComponent.cpp" />
     <ClCompile Include="TriangleMeshComponent.cpp" />
@@ -157,6 +158,7 @@
     <ClInclude Include="MeshComponent.h" />
     <ClInclude Include="SharedTransformations.h" />
     <ClInclude Include="SharedUniformBlock.h" />
+    <ClInclude Include="Triangle1MeshComponent.h" />
     <ClInclude Include="Triangle2MeshComponent.h" />
     <ClInclude Include="Triangle3MeshComponent.h" />
     <ClInclude Include="TriangleMeshComponent.h" />

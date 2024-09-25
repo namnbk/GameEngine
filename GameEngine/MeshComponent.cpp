@@ -84,7 +84,6 @@ void MeshComponent::draw() const
 				// Trigger vertex fetch for indexed rendering 
 				glDrawElements(subMesh.primitiveMode, subMesh.count, GL_UNSIGNED_INT, 0);
 			}
-
 		}
 	}
 

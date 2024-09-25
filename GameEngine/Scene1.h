@@ -37,7 +37,7 @@ class Scene1 : public Game
 
 		// Add a trianlge mesh component
 		ComponentPtr triangle =
-			std::make_shared<Triangle3MeshComponent>(shaderProgram);
+			std::make_shared<TriangleMeshComponent>(shaderProgram);
 		gameObject->addComponent(triangle);
 
 		// Game object added
