@@ -195,6 +195,10 @@ protected:
 	/** @brief	A flag for J key down */
 	bool J_KeyDown = false;
 
+	/** @brief wireframe mode */
+	bool W_KeyDown = false;
+	bool wireframeMode = false;
+
 }; // end game class
 
 //********************* static function declarations ********************

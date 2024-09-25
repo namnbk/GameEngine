@@ -244,6 +244,25 @@ void Game::processGameInput()
 		// set the flag
 		ESC_KeyDown = false;
 	}
+	// Wireframe mode
+	// Check if the 'w' key is pressed and wasn't pressed before
+	if (GLFW_PRESS == glfwGetKey(glfwGetCurrentContext(), GLFW_KEY_W) && !W_KeyDown) {
+		// toggle the wireframe mode
+		wireframeMode = !wireframeMode;
+		// set according polygon mode
+		if (wireframeMode) {
+			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);  // Switch to wireframe mode
+		}
+		else {
+			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);  // Switch to fill mode
+		}
+		// set flag to true to avoid repeating while key is held down
+		W_KeyDown = true;
+	}
+	else if (glfwGetKey(glfwGetCurrentContext(), GLFW_KEY_W) == GLFW_RELEASE) {
+		// reset flag to allow printing again when the key is pressed
+		W_KeyDown = false;
+	}
 
 	// Check if the 'j' key is pressed and wasn't pressed before
 	if (GLFW_PRESS == glfwGetKey(glfwGetCurrentContext(), GLFW_KEY_J) && !J_KeyDown) {
